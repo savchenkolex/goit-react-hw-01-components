@@ -1,6 +1,5 @@
 export default function TransactionHistory ({items}) {
-    console.log(items);
-    //
+    
     const rows = items.map(({id, type, amount, currency}) => {
         return (<>
              <tr key={id}>
@@ -11,7 +10,7 @@ export default function TransactionHistory ({items}) {
     </> )
     })
     return (
-        <table class="transaction-history">
+        <table className="transaction-history">
   <thead>
     <tr>
       <th>Type</th>
