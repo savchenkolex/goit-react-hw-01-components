@@ -1,6 +1,9 @@
+import PropTypes from 'prop-types';
+
 export default function TransactionHistory ({items}) {
     
     const rows = items.map(({id, type, amount, currency}) => {
+        
         return (<>
              <tr key={id}>
                 <td>{type}</td>
@@ -18,11 +21,17 @@ export default function TransactionHistory ({items}) {
       <th>Currency</th>
     </tr>
   </thead>
-
   <tbody>
     {rows}
   </tbody>
 </table>
     ) 
     
+}
+
+TransactionHistory.propTypes = {
+    id: PropTypes.number,
+    type: PropTypes.string,
+    amount: PropTypes.number,
+    currency: PropTypes.string
 }
