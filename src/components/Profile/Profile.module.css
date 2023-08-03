@@ -14,7 +14,7 @@
     background-color: white;
     border: 0.5px solid #A9B3BD;
     border-radius: 4px 4px  0 0;
-    width: 300px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +25,22 @@
 .avatar {
     border-radius: 50%;
     width: 100px;
+    margin-bottom: 30px;
+}
+
+.name {
+    color: black;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.tag {
+    margin: 0 0 8px 0;
+}
+
+.location {
+    margin: 0 0 24px 0;
 }
 
 .stats {
@@ -38,7 +54,7 @@
     border: 0.5px solid #A9B3BD;
     border-radius: 0 0 4px 4px;
     margin:0;
-    width: 300px;
+    width: 280px;
 }
 
 .stats li {
@@ -54,4 +70,16 @@
 
 .stats li:hover {
     background-color: #E7ECF2;
+}
+
+.label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #9CA7B2;
+    font-weight: 600;
+}
+
+.quantity {
+    color: black;
+    font-weight: bold;
 }
