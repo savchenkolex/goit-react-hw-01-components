@@ -1,7 +1,7 @@
-import user from '../../db/user.json';
+import PropTypes from 'prop-types';
 
-
-export const Profile = () => {
+export const Profile = ({user}) => {
+  
    const {username, tag, location, avatar, stats} = user;
         return (
             <div className="profile">
@@ -32,4 +32,14 @@ export const Profile = () => {
             </ul>
           </div>
     );
+}
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
 }

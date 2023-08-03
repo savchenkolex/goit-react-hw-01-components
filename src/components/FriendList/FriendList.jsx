@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
+
 export default function FriendList ({friends}) {
     
-    const list = friends.map((friend) => {
-        return (<li key={friend.id} className="item">
-                <span className="status">{friend.isOnline}</span>
-                <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
-                <p className="name">{friend.name}</p>
+    const list = friends.map(({id,isOnline,avatar,name}) => {
+        return (<li key={id} className="item">
+                <span className="status">{isOnline}</span>
+                <img className="avatar" src={avatar} alt="User avatar" width="48" />
+                <p className="name">{name}</p>
                </li>
         )
     });
@@ -14,4 +16,11 @@ export default function FriendList ({friends}) {
         </ul>
     )
     return base;
+}
+
+FriendList.propTypes = {
+    id: PropTypes.number,
+    isOnline: PropTypes.bool,
+    avatar: PropTypes.string,
+    name: PropTypes.string
 }
