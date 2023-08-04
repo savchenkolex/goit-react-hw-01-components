@@ -1,4 +1,4 @@
-import PropTypes, { shape } from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
 export const Profile = ({ user }) => {
