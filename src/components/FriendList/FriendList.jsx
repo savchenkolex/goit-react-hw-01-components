@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import css from './FriendList.module.css';
 
 export default function FriendList ({friends}) {
-    console.log(css);
+    
     const list = friends.map(({id,isOnline,avatar,name}) => {
         return (<li key={id} className={css.item}>
                 <span className={ isOnline ? 

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
 export default function Statistics ({title, stats}) {
-  console.log(stats);
+  
   const listItem = stats.map(({id,label,percentage})=>{
     return (
       <li key={id} className={css.item}>
